@@ -25,8 +25,4 @@ export class AppComponent {
       today.getSeconds();
     this.timeStamp.push(this.dataTime);
   }
-
-  getColor() {
-    return "blue";
-  }
 }
