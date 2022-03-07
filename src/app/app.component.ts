@@ -25,4 +25,8 @@ export class AppComponent {
       today.getSeconds();
     this.timeStamp.push(this.dataTime);
   }
+
+  getColor() {
+    return this.timeStamp.length == 5 || this.timeStamp.length > 5 ? "green": "black";
+  }
 }
