@@ -1,6 +1,8 @@
 <button class="btn btn-primary" (click)="startTime()">
   Display Details
 </button>
-<!-- <p *ngIf="itemCreated;else showItem">ต.ย.</p>
-<ng-template #showItem><p></p></ng-template> -->
-<p *ngFor="let menu-item of timeStamp">{{timeStamp}}</p>
+<p *ngIf="itemCreated;else showParagraph"></p>
+<ng-template #showParagraph>
+  <p>รหัสผ่านลับ: ปลา ชิงชัน</p>
+</ng-template>
+<p [ngStyle]="{color: getColor()}" *ngFor="let time of timeStamp">{{time}}</p>a

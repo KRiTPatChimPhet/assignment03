@@ -7,19 +7,26 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'assignment03';
-  itemCreated = true;
-  values = 0;
+  itemCreated = false;
   timeStamp = Array();
-  dataTime = "";
-
-
+  dataTime = '';
 
   startTime() {
-    this.itemCreated = false;
+    this.itemCreated = true;
     let today = new Date();
-    this.dataTime = (today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds());
+    this.dataTime =
+      'Date : ' +
+      today.getDate() +
+      ' Time : ' +
+      today.getHours() +
+      ':' +
+      today.getMinutes() +
+      ':' +
+      today.getSeconds();
     this.timeStamp.push(this.dataTime);
-    console.log(this.timeStamp);
+  }
 
+  getColor() {
+    return "blue";
   }
 }
